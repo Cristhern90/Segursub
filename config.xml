@@ -5,8 +5,8 @@
         version   = "2.1.2">
 	
 	
-    <name>infocapp</name>
-    <description>Aplicació d'informació al turista de Capdepera</description>
+    <name>SegurSub</name>
+    <description>Aplicació Segur Sub</description>
     <author href="http://bitgrup.com" email="info@bitgrup.com">BITGRUP</author>
     
     <platform name="ios">
