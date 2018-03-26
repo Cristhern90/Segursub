@@ -2,8 +2,8 @@
 //FUNCTIONS APP
 
 var bitgrup = {
-    urlFunctions: 'http://bitgrup.es/webtest/cristian/appSeguros2includes/ajax_mobile.php',
-    urlFunctions2: 'http://bitgrup.es/webtest/cristian/appSeguros2/json/test.json',
+    urlFunctions: 'http://bitgrup.es/webtest/segursub/includes/ajax_mobile.php',
+    urlFunctions2: 'http://bitgrup.es/webtest/segursub/json/test.json',
 //    urlFunctions2: 'https://www.divemasterinsurance.com/JSONtest/JSONTest.php?TransactionID=3542',
     DB: null,
     menu_heiht: 0,
