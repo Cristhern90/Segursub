@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.turismecapdepera.bitgrup"
+        version   = "2.1.2">
+	
+	
+    <name>infocapp</name>
+    <description>Aplicació d'informació al turista de Capdepera</description>
+    <author href="http://bitgrup.com" email="info@bitgrup.com">BITGRUP</author>
+    
+    <platform name="ios">
+        <config-file parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
+            <string>Se necesita acceder a la cámara para añadir imágenes</string>
+        </config-file>
+        <config-file parent="NSPhotoLibraryUsageDescription" platform="ios" target="*-Info.plist">
+            <string>Se necesita acceder a la libreria para añadir imágenes</string>
+        </config-file>
+        <config-file parent="NSBluetoothPeripheralUsageDescription" platform="ios" target="*-Info.plist">
+            <string>Advertisement would like to use bluetooth.</string> 
+        </config-file>
+        <config-file parent="NSLocationAlwaysUsageDescription" platform="ios" target="*-Info.plist">
+            <string>Se necesita la localización en caso de querer enviar una incidencia</string>
+        </config-file> 
+        <config-file parent="NSLocationWhenInUseUsageDescription" platform="ios" target="*-Info.plist">
+            <string>Se necesita la localización en caso de querer enviar una incidencia</string>
+        </config-file>
+    </platform>
+	
+    <!-- PREFERENCE -->
+    <preference name="phonegap-version" value="cli-6.5.0" /> 
+    <preference name="orientation" value="portrait" /> 
+    <preference name="stay-in-webview" value="false" />
+    <preference name="CameraUsesGeolocation" value="false" />
+    <preference name="ChildBrowser" value="disable"/>
+    <preference name="android-build-tool" value="gradle" /> 
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="deployment-target" value="7.0" />
+    <preference name="DisallowOverscroll" value="true" /> 
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="GEOLOCATION_USAGE_DESCRIPTION" default=" " />
+    
+	   
+    <!-- PLUGINS -->
+    <gap:plugin name="phonegap-plugin-push"  source="npm" version="1.9.2"/>   
+    <gap:plugin name="cordova-plugin-screen-orientation"   source="npm" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="cordova-plugin-device"  source="npm" />
+    <gap:plugin name="cordova-plugin-inappbrowser"  source="npm" />
+	
+
+  
+    <feature name='Device'>
+        <param name='android-package' value='org.apache.cordova.device.Device' />
+        <param name='ios-package' value='Device'/>
+    </feature> 
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>
+	
+	
+    <platform name="ios" />
+    <platform name="android" />
+	
+	
+    <access origin="*://*.googleapis.com/*" subdomains="true" />
+    <access origin="*://*.gstatic.com/*" subdomains="true" />
+    <access origin="*://*.google.com/*" subdomains="true" />
+    <access origin="*://*.googleusercontent.com/*" subdomains="true" />
+    <access origin="*://*.playasdecapdepera.com/*" subdomains="true" />
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
+    <access origin="*" />
+
+    <key>ExternalHosts</key>
+    <array>
+        <string>*</string>
+    </array>
+	
+	
+	
+    <!-- IOS -->
+    <icon src="icons/icoapp/ios/Icon-App-20x20@1x.png" platform="ios" width="20" height="20" />
+    
+    <icon src="icons/icoapp/ios/Icon-small.png" gap:platform="ios" width="29" height="29" />
+    <icon src="icons/icoapp/ios/Icon.png" gap:platform="ios" width="57" height="57" />
+    <icon src="icons/icoapp/ios/Icon@2x.png" gap:platform="ios" width="114" height="114" />
+    <icon src="icons/icoapp/ios/Icon-40.png" gap:platform="ios" width="40" height="40" />
+    <icon src="icons/icoapp/ios/Icon-40@2x.png" gap:platform="ios" width="80" height="80" />
+    <icon src="icons/icoapp/ios/Icon-small@3x.png" gap:platform="ios" width="87" height="87" />
+    <icon src="icons/icoapp/ios/Icon-50.png" gap:platform="ios" width="50" height="50" />
+    <icon src="icons/icoapp/ios/Icon-small@2x.png" gap:platform="ios" width="58" height="58" />
+    <icon src="icons/icoapp/ios/Icon-50@2x.png" gap:platform="ios" width="100" height="100" />
+    <icon src="icons/icoapp/ios/Icon-60.png" gap:platform="ios" width="60" height="60" />
+    <icon src="icons/icoapp/ios/Icon-72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="icons/icoapp/ios/Icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+    <icon src="icons/icoapp/ios/Icon-76.png" gap:platform="ios" width="76" height="76" />
+    <icon src="icons/icoapp/ios/Icon-40@2x.png" gap:platform="ios" width="80" height="80" />
+    <icon src="icons/icoapp/ios/Icon-60@2x.png" gap:platform="ios" width="120" height="120" />
+    <icon src="icons/icoapp/ios/Icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+    <icon src="icons/icoapp/ios/Icon-167.png" gap:platform="ios" width="167" height="167" />
+    <icon src="icons/icoapp/ios/Icon-60@3x.png" gap:platform="ios" width="180" height="180" />
+   
+    <splash src="icons/splash/ios/Default-568h@2x~iphone_640x1136.png"              platform="ios" width="640" height="1136" />
+    <splash src="icons/splash/ios/Default-750@2x~iphone6-landscape_1334x750.png"    platform="ios" width="1334" height="750" />
+    <splash src="icons/splash/ios/Default-750@2x~iphone6-portrait_750x1334.png"     platform="ios" width="750" height="1334" />
+    <splash src="icons/splash/ios/Default-1242@3x~iphone6s-landscape_2208x1242.png" platform="ios" width="2208" height="1242" />
+    <splash src="icons/splash/ios/Default-1242@3x~iphone6s-portrait_1242x2208.png"  platform="ios" width="1242" height="2208" />
+    <splash src="icons/splash/ios/Default-Landscape@2x~ipad_2048x1496.png"          platform="ios" width="2048" height="1496" />
+    <splash src="icons/splash/ios/Default-Landscape@2x~ipad_2048x1536.png"          platform="ios" width="2048" height="1536" />
+    <splash src="icons/splash/ios/Default-Landscape~ipad_1024x748.png"              platform="ios" width="1024" height="748" />
+    <splash src="icons/splash/ios/Default-Landscape~ipad_1024x768.png"              platform="ios" width="1024" height="768" />
+    <splash src="icons/splash/ios/Default-Portrait@2x~ipad_1536x2008.png"           platform="ios" width="1536" height="2008" />
+    <splash src="icons/splash/ios/Default-Portrait@2x~ipad_1536x2048.png"           platform="ios" width="1536" height="2048" />
+    <splash src="icons/splash/ios/Default-Portrait~ipad_768x1024.png"               platform="ios" width="768" height="1024" />
+    <splash src="icons/splash/ios/Default.png"                                      platform="ios" width="768" height="1004" />
+    <splash src="icons/splash/ios/Default@2x~iphone_640x960.png"                    platform="ios" width="640" height="960" />
+    <splash src="icons/splash/ios/Default~ipad.png"                                 platform="ios" width="1536" height="2008" />
+    <splash src="icons/splash/ios/Default~iphone.png"                               platform="ios" width="320" height="480" />
+   
+    <!-- ANDROID -->
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>    
+    <icon src="icons/icoapp/android/drawable/icon.png" platform="android"/>
+    <icon src="icons/icoapp/android/drawable-ldpi/icon.png" platform="android" qualifier="ldpi" />
+    <icon src="icons/icoapp/android/drawable-mdpi/icon.png" platform="android" qualifier="mdpi" />
+    <icon src="icons/icoapp/android/drawable-hdpi/icon.png" platform="android" qualifier="hdpi" />
+    <icon src="icons/icoapp/android/drawable-xhdpi/icon.png" platform="android" qualifier="xhdpi" />
+    <icon src="icons/icoapp/android/drawable-xxhdpi/icon.png" platform="android" qualifier="xxhdpi" />
+    <icon src="icons/icoapp/android/drawable-xxxhdpi/icon.png" platform="android" qualifier="fr-xxhdpi" />
+    
+    <splash  src="icons/splash/andorid/drawable/screen.png" platform="android" qualifier="" />
+    <splash  src="icons/splash/andorid/drawable-hdpi/screen.png" platform="android" qualifier="hdpi" />
+    <splash  src="icons/splash/andorid/drawable-land/screen.png" platform="android" qualifier="land" />
+    <splash  src="icons/splash/andorid/drawable-land-hdpi/screen.png" platform="android" qualifier="land-hdpi" />
+    <splash  src="icons/splash/andorid/drawable-land-ldpi/screen.png" platform="android" qualifier="land-ldpi" />
+    <splash  src="icons/splash/andorid/drawable-land-mdpi/screen.png" platform="android" qualifier="land-mdpi" />
+    <splash  src="icons/splash/andorid/drawable-land-xhdpi/screen.png" platform="android" qualifier="land-xhdpi" />
+    <splash  src="icons/splash/andorid/drawable-land-xxhdpi/screen.png" platform="android" qualifier="land-xxhdpi" />
+    <splash  src="icons/splash/andorid/drawable-land-xxxhdpi/screen.png" platform="android" qualifier="land-xxxhdpi" />
+    <splash  src="icons/splash/andorid/drawable-ldpi/screen.png" platform="android" qualifier="ldpi" />
+    <splash  src="icons/splash/andorid/drawable-mdpi/screen.png" platform="android" qualifier="mdpi" />
+    <splash  src="icons/splash/andorid/drawable-xhdpi/screen.png" platform="android" qualifier="xhdpi" />
+    <splash  src="icons/splash/andorid/drawable-xxhdpi/screen.png" platform="android" qualifier="xxhdpi" />
+    <splash  src="icons/splash/andorid/drawable-xxxhdpi/screen.png" platform="android" qualifier="xxxhdpi" />
+    
+	
+    <!-- default  -->	
+    <icon src="icons/icoapp/android/drawable-ldpi/icon.png" platform="android" qualifier="ldpi" />
+
+    
+    <!-- ANDROID -->
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    
+
+	
+
+</widget>
+

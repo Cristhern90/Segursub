@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta name="generator" content="SensationThemes">
+        <link href="css/normalize.css" rel="stylesheet" type="text/css">
+
+        <link href="images/logo32.png" rel="shortcut icon" type="image/x-icon">
+        <link href="images/logo.png" rel="apple-touch-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css">
+
+        <link href="jquery-mobile/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
+
+        <link href="css/webflow.css" rel="stylesheet" type="text/css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+
+
+    </head>
+    <body>
+        <!-- LOGIN -->
+        <div data-role="page" class="pagina"  id="login">
+            <section class="mobile-wrapper">
+                <div class="w-embed">
+                </div>
+                <div class="bg-gradient page-content" data-scroll="0" id="main-stack">
+                    <div class="body padding">
+                        <div class="logo-login"></div>
+                        <div class="bottom-section padding">
+                            <div class="w-form">
+                                <form data-name="Email Form" id="submit-form" name="email-form" method="post">
+                                    <div>
+                                        <input class="input-form light w-input" data-name="ID" id="id" maxlength="30" name="id" placeholder="Id" required="required" type="text">
+                                        <div class="separator-fields"></div>
+                                    </div>
+                                    <div>
+                                        <input class="action-button w-button" data-wait="Please wait..." type="submit" value="Sign In">
+                                        <div class="separator-button"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="loading-mask page-content" id="new-stack">
+                    <div class="loading-icon">
+                        <div class="icon ion-load-d navbar-button-icon"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- HOME -->
+        <div data-role="page" class="pagina"  id="home">
+            <section class="mobile-wrapper">
+                <div class="w-embed">
+                </div>
+                <div class="navbar w-nav" data-animation="default" data-collapse="medium" data-duration="700">
+                    <div class="w-container">
+                        <nav class="bg-gradient nav-menu w-nav-menu" role="navigation">
+                            <a class="btn-close-button nav-menu-link w-clearfix w-inline-block">
+                                <div class="icon-list-menu">
+                                    <div class="icon ion-android-close"></div>
+                                </div>
+                                <div class="nav-menu-titles literal" data-literal="msg_menu_4">Close Menu</div>
+                            </a>
+                            <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('home')">
+                                <div class="icon-list-menu">
+                                    <div class="icon ion-ios-home-outline"></div>
+                                </div>
+                                <div class="nav-menu-titles">Home</div>
+                            </a>
+                            <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('seguros')">
+                                <div class="icon-list-menu">
+                                    <div class="icon ion-ios-box-outline"></div>
+                                </div>
+                                <div class="nav-menu-titles literal" data-literal="msg_menu_1">Seguros</div>
+                            </a>
+                            <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('ofertas')">
+                                <div class="icon-list-menu">
+                                    <div class="icon ion-ios-pricetag"></div>
+                                </div>
+                                <div class="nav-menu-titles literal" data-literal="msg_menu_2">Ofertas</div>
+                            </a>
+                            <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('info')">
+                                <div class="icon-list-menu">
+                                    <div class="icon ion-information-circled"></div>
+                                </div>
+                                <div class="nav-menu-titles literal" data-literal="msg_menu_3">Info</div>
+                            </a>
+                            <a class="nav-menu-link w-clearfix w-inline-block logout">
+                                <div class="icon-list-menu">
+                                    <div class="icon ion-log-out"></div>
+                                </div>
+                                <div class="nav-menu-titles">Logout</div>
+                            </a>
+                        </nav>
+                        <div class="navbar-button right w-nav-button" id="menu-button">
+                            <div class="home-icon navbar-button-icon">
+                                <div class="bar-home-icon top"></div>
+                                <div class="bar-home-icon middle"></div>
+                                <div class="bar-home-icon bottom"></div>
+                            </div>
+                        </div>
+                        <!--<a class="navbar-button w-inline-block" data-ix="search-box" href="#">
+                            <div class="icon ion-ios-search navbar-button-icon"></div>
+                        </a>-->
+                    </div>
+                </div>
+                <div class="bg-gradient page-content" data-scroll="0" id="main-stack">
+                    <div class="body padding">
+                        <div class="logo-login"></div>
+                        <div class="list_home">
+                            <div class="literal" data-literal="msg_menu_1" onclick="bitgrup.changePage('seguros')">Seguros</div>
+                            <div class="literal" data-literal="msg_menu_2" onclick="bitgrup.changePage('ofertas')">Ofertas</div>
+                            <div class="literal" data-literal="msg_menu_3" onclick="bitgrup.changePage('info')">Info</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- LISTA SEGUROS -->
+        <div data-role="page" class="pagina"  id="seguros">
+            <section class="mobile-wrapper">
+                <div class="w-embed">
+                </div>
+                <div class="page-content" id="main-stack">
+                    <div class="navbar w-nav" data-animation="default" data-collapse="medium" data-duration="700">
+                        <div class="w-container">
+                            <nav class="bg-gradient nav-menu w-nav-menu" role="navigation">
+                                <a class="btn-close-button nav-menu-link w-clearfix w-inline-block">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-android-close"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_4">Close Menu</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('home')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-home-outline"></div>
+                                    </div>
+                                    <div class="nav-menu-titles">Home</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('seguros')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-box-outline"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_1">Seguros</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('ofertas')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-pricetag"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_2">Ofertas</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('info')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-information-circled"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_3">Info</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block logout">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-log-out"></div>
+                                    </div>
+                                    <div class="nav-menu-titles">Logout</div>
+                                </a>
+                            </nav>
+                            <div class="navbar-title literal" data-literal="msg_segu_1">Tipos de seguros</div>
+                            <!--<div class="navbar-button right logout">
+                                <div class="icon ion-close-circled"></div>
+                            </div>-->
+                            <div class="navbar-button right w-nav-button" id="menu-button">
+                                <div class="home-icon navbar-button-icon">
+                                    <div class="bar-home-icon top"></div>
+                                    <div class="bar-home-icon middle"></div>
+                                    <div class="bar-home-icon bottom"></div>
+                                </div>
+                            </div>
+                            <a class="navbar-button w-inline-block" onclick="bitgrup.changePageBack('home')">
+                                <div class="icon ion-chevron-left"></div>
+                            </a>
+                            <!--<a class="navbar-button w-inline-block" data-ix="search-box" href="#">
+                                <div class="icon ion-ios-search navbar-button-icon"></div>
+                            </a>-->
+                        </div>
+                    </div>
+                    <!--<div class="body padding smaller " id="search-fixed">
+                        <div class="w-form">
+                            <form action="" data-name="Email Form" id="search-form" name="email-form">
+                                <div class="separator-fields"></div>
+                                <div class="separator-fields"></div>
+                                <div class="background-grey search"></div>
+                                <div class="row-input-list search">
+                                    <div class="block-input-combined">
+                                        <div class="col-xs-12 no_padding search_cont">
+                                            <input type="text" data-type="search" id="filter_pedidos">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>-->
+                    <div class="body ">
+                        <ul class="list list-messages lists_segurs">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- FICHA SEGURO -->
+        <div data-role="page" class="pagina"  id="ficha">
+            <section class="mobile-wrapper">
+                <div class="w-embed">
+                </div>
+                <div class="page-content" id="main-stack">
+                    <div class="navbar w-nav" data-animation="default" data-collapse="all" data-duration="700">
+                        <div class="w-container">
+                            <nav class="bg-gradient nav-menu w-nav-menu" role="navigation">
+                                <a class="btn-close-button nav-menu-link w-clearfix w-inline-block">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-android-close"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_4">Close Menu</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('home')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-home-outline"></div>
+                                    </div>
+                                    <div class="nav-menu-titles">Home</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('seguros')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-box-outline"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_1">Seguros</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('ofertas')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-pricetag"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_2">Ofertas</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('info')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-information-circled"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_3">Info</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block logout">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-log-out"></div>
+                                    </div>
+                                    <div class="nav-menu-titles">Logout</div>
+                                </a>
+                            </nav>
+                            <div class="navbar-title">Seguro</div>
+                            <!--<div class="navbar-button right logout">
+                                <div class="icon ion-close-circled"></div>
+                            </div>-->
+
+                            <div class="navbar-button right w-nav-button" id="menu-button">
+                                <div class="home-icon navbar-button-icon">
+                                    <div class="bar-home-icon top"></div>
+                                    <div class="bar-home-icon middle"></div>
+                                    <div class="bar-home-icon bottom"></div>
+                                </div>
+                            </div>
+                            <a class="navbar-button w-inline-block" onclick="bitgrup.changePageBack('seguros')">
+                                <div class="icon ion-chevron-left"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="profile">
+                            <div class="profile-header">
+                                <div class="profile-avatar"><img class="profile-avatar-image" src="images/128.jpg" width="74">
+                                </div>
+                                <div class="profile-avatar-name-container">
+                                    <div class="profile-avatar-name">Tipus reserva 1</div>
+                                    <div class="profile-avatar-job"></div>
+                                </div>
+                            </div>
+                            <div class="profile-figures">
+                                <div class="w-row">
+                                    <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                                        <div class="profile-figures-column-group">
+                                            <div class="profile-figures-number date_in">26/08/2018</div>
+                                            <div class="profile-figures-title"></div>
+                                        </div>
+                                    </div>
+                                    <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                                        <div class="profile-figures-column-group">
+                                        </div>
+                                    </div>
+                                    <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4">
+                                        <div class="profile-figures-column-group">
+                                            <div class="profile-figures-number date_fin">18/12/2018</div>
+                                            <div class="profile-figures-title"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <!-- INFO -->
+        <div data-role="page" class="pagina"  id="info">
+            <section class="mobile-wrapper">
+                <div class="w-embed">
+                </div>
+                <div class="page-content" id="main-stack">
+                    <div class="navbar w-nav" data-animation="default" data-collapse="all" data-duration="700">
+                        <div class="w-container">
+                            <nav class="bg-gradient nav-menu w-nav-menu" role="navigation">
+                                <a class="btn-close-button nav-menu-link w-clearfix w-inline-block">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-android-close"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_4">Close Menu</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('home')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-home-outline"></div>
+                                    </div>
+                                    <div class="nav-menu-titles">Home</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('seguros')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-box-outline"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_1">Seguros</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('ofertas')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-pricetag"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_2">Ofertas</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('info')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-information-circled"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_3">Info</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block logout">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-log-out"></div>
+                                    </div>
+                                    <div class="nav-menu-titles">Logout</div>
+                                </a>
+                            </nav>
+                            <div class="navbar-title">INFO</div>
+                            <!--<div class="navbar-button right logout">
+                                <div class="icon ion-close-circled"></div>
+                            </div>-->
+
+                            <div class="navbar-button right w-nav-button" id="menu-button">
+                                <div class="home-icon navbar-button-icon">
+                                    <div class="bar-home-icon top"></div>
+                                    <div class="bar-home-icon middle"></div>
+                                    <div class="bar-home-icon bottom"></div>
+                                </div>
+                            </div>
+                            <a class="navbar-button w-inline-block" onclick="bitgrup.changePageBack('home')">
+                                <div class="icon ion-chevron-left"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="item-new news-container">
+                            <div>
+                                <div class="grey-header">
+                                    <h2 class="grey-heading-title">Header</h2>
+                                </div>
+                                <div class="no-borders text-new">
+                                    <div>
+                                        <div class="separator-fields"></div>
+                                        <h2 class="title-new">Title</h2>
+                                        <div class="separator-fields"></div>
+                                        <p class="description-new">We want you to create the best page you can possibly imagine, that’s why we have thought about adding new elements and features to give your page that unique touch and elegance. You can now use the social sharing buttons we have created for you and &nbsp;share or show off your social networks and fans.
+                                            <br>
+                                            <br>We have incorporated a tone of elements and features to give your page that unique style and special touch which will make your page stand out.</p>
+                                        <div class="separator-button"></div>
+                                    </div>
+                                    <div>
+                                        <h2 class="title-new">Tabs</h2>
+                                        <div class="separator-fields"></div>
+                                        <div class="w-tabs" data-duration-in="300" data-duration-out="100">
+                                            <div class="group-block">
+                                                <a class="w-inline-block" data-load="1" href="news.html">
+                                                    <div class="group-image"></div>
+                                                </a>
+                                            </div>
+                                            <div class="group-block last">
+                                                <a class="w-inline-block" data-load="1" href="news.html">
+                                                    <div class="bg1 group-image"></div>
+                                                </a>
+                                            </div>
+                                            <div class="group-block">
+                                                <a class="w-inline-block" data-load="1" href="news.html">
+                                                    <div class="bg2 group-image"></div>
+                                                </a>
+                                            </div>
+                                            <div class="group-block last">
+                                                <a class="w-inline-block" data-load="1" href="news.html">
+                                                    <div class="bg3 group-image"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- OFERTES -->
+        <div data-role="page" class="pagina"  id="ofertas">
+            <section class="mobile-wrapper">
+                <div class="w-embed">
+                </div>
+                <div class="page-content" id="main-stack">
+                    <div class="navbar w-nav" data-animation="default" data-collapse="all" data-duration="700">
+                        <div class="w-container">
+                            <nav class="bg-gradient nav-menu w-nav-menu" role="navigation">
+                                <a class="btn-close-button nav-menu-link w-clearfix w-inline-block">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-android-close"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_4">Close Menu</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('home')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-home-outline"></div>
+                                    </div>
+                                    <div class="nav-menu-titles">Home</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('seguros')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-box-outline"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_1">Seguros</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('ofertas')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-pricetag"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_2">Ofertas</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('info')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-information-circled"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_3">Info</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block logout">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-log-out"></div>
+                                    </div>
+                                    <div class="nav-menu-titles">Logout</div>
+                                </a>
+                            </nav>
+                            <div class="navbar-title literal" data-literal="msg_menu_2">OFERTAS</div>
+                            <!--<div class="navbar-button right logout">
+                                <div class="icon ion-close-circled"></div>
+                            </div>-->
+
+                            <div class="navbar-button right w-nav-button" id="menu-button">
+                                <div class="home-icon navbar-button-icon">
+                                    <div class="bar-home-icon top"></div>
+                                    <div class="bar-home-icon middle"></div>
+                                    <div class="bar-home-icon bottom"></div>
+                                </div>
+                            </div>
+                            <a class="navbar-button w-inline-block" onclick="bitgrup.changePageBack('home')">
+                                <div class="icon ion-chevron-left"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="body ">
+                        <ul class="list list-messages" id="list_ofertas">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- FICHA OFERTA -->
+        <div data-role="page" class="pagina"  id="oferta">
+            <section class="mobile-wrapper">
+                <div class="w-embed">
+                </div>
+                <div class="page-content" id="main-stack">
+                    <div class="navbar w-nav" data-animation="default" data-collapse="all" data-duration="700">
+                        <div class="w-container">
+                            <nav class="bg-gradient nav-menu w-nav-menu" role="navigation">
+                                <a class="btn-close-button nav-menu-link w-clearfix w-inline-block">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-android-close"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_4">Close Menu</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('home')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-home-outline"></div>
+                                    </div>
+                                    <div class="nav-menu-titles">Home</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('seguros')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-box-outline"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_1">Seguros</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('ofertas')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-ios-pricetag"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_2">Ofertas</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block" onclick="bitgrup.changePage('info')">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-information-circled"></div>
+                                    </div>
+                                    <div class="nav-menu-titles literal" data-literal="msg_menu_3">Info</div>
+                                </a>
+                                <a class="nav-menu-link w-clearfix w-inline-block logout">
+                                    <div class="icon-list-menu">
+                                        <div class="icon ion-log-out"></div>
+                                    </div>
+                                    <div class="nav-menu-titles">Logout</div>
+                                </a>
+                            </nav>
+                            <div class="navbar-title literal" data-literal="msg_ofer_1">OFERTA</div>
+                            <!--<div class="navbar-button right logout">
+                                <div class="icon ion-close-circled"></div>
+                            </div>-->
+
+                            <div class="navbar-button right w-nav-button" id="menu-button">
+                                <div class="home-icon navbar-button-icon">
+                                    <div class="bar-home-icon top"></div>
+                                    <div class="bar-home-icon middle"></div>
+                                    <div class="bar-home-icon bottom"></div>
+                                </div>
+                            </div>
+                            <a class="navbar-button w-inline-block" onclick="bitgrup.changePageBack('ofertas')">
+                                <div class="icon ion-chevron-left"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="item-new news-container">
+                            <div>
+                                <div class="grey-header">
+                                    <h2 class="grey-heading-title"></h2>
+                                </div>
+                                <div class="no-borders text-new">
+                                    <div>
+                                        <div class="separator-fields"></div>
+                                        <h2 class="title-new tit1"></h2>
+                                        <div class="separator-fields"></div>
+                                        <div class="desciption_cont">
+
+                                        </div>
+
+                                        <div class="separator-button"></div>
+                                    </div>
+                                    <div>
+                                        <h2 class="title-new">Tabs</h2>
+                                        <div class="separator-fields"></div>
+                                        <div class="w-tabs imgs_list" data-duration-in="300" data-duration-out="100">
+                                            <div class="group-block">
+                                                <a class="w-inline-block" data-load="1" href="news.html">
+                                                    <div class="group-image"></div>
+                                                </a>
+                                            </div>
+                                            <div class="group-block last">
+                                                <a class="w-inline-block" data-load="1" href="news.html">
+                                                    <div class="bg1 group-image"></div>
+                                                </a>
+                                            </div>
+                                            <div class="group-block">
+                                                <a class="w-inline-block" data-load="1" href="news.html">
+                                                    <div class="bg2 group-image"></div>
+                                                </a>
+                                            </div>
+                                            <div class="group-block last">
+                                                <a class="w-inline-block" data-load="1" href="news.html">
+                                                    <div class="bg3 group-image"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <script src="js/webfont.js"></script>
+        <script type="text/javascript">
+                                WebFont.load({
+                                    google: {
+                                        families: ["Montserrat:400,700"]
+                                    }
+                                });
+        </script>
+        <script src="js/modernizr.js" type="text/javascript"></script>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="jquery-mobile/jquery.js" type="text/javascript"></script>
+        <script src="js/webflow.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <script src="js/md5.js" type="text/javascript"></script>
+        <script src="js/jquery.i18n.properties-1.0.9.js" type="text/javascript"></script>
+        <script src="js/bitgrup.js" type="text/javascript"></script>
+
+
+    </body>
+</html>
