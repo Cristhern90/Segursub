@@ -2,8 +2,8 @@
 //FUNCTIONS APP
 
 var bitgrup = {
-    urlFunctions: 'http://bitgrup.es/webtest/segursub/includes/ajax_mobile.php',
-    urlFunctions2: 'http://bitgrup.es/webtest/segursub/json/test.json',
+    urlFunctions: 'https://bitgrup.es/webtest/segursub/includes/ajax_mobile.php',
+    urlFunctions2: 'https://bitgrup.es/webtest/segursub/json/test.json',
 //    urlFunctions2: 'https://www.divemasterinsurance.com/JSONtest/JSONTest.php?TransactionID=3542',
     DB: null,
     menu_heiht: 0,
@@ -92,8 +92,9 @@ var bitgrup = {
                     console.log(e);
                 }
             },
-            error: function (e) {
-                console.log(e);
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.status);
+                console.log(thrownError);
             }
         });
 
@@ -197,15 +198,15 @@ var bitgrup = {
         formData.append("lang", bitgrup.lang);
         formData.append("code", seg.type);
         var resp = bitgrup.conect(formData);
-        $("#ficha .profile-avatar img").attr("src",'../images/ofertas/mobile_' + resp.str.img + '');
-        $("#ficha .profile-avatar img").attr("height",'74');
+        $("#ficha .profile-avatar img").attr("src", '../images/ofertas/mobile_' + resp.str.img + '');
+        $("#ficha .profile-avatar img").attr("height", '74');
         $("#ficha .profile-avatar-name").html(resp.str.nom);
         $("#ficha .profile-figures .date_in").html(seg.init);
         $("#ficha .profile-figures .date_fin").html(seg.end);
 //        $("#ficha .description").html(' <object data="http://'+seg.conditions+'" type="application/pdf">\n\
 //                                            <embed src="http://'+seg.conditions+'" type="application/pdf" />\n\
 //                                        </object>');
-        $("#ficha .description").html('<iframe id="fred" style="border:1px solid #666CCC" title="PDF in an i-Frame" src="http://'+seg.conditions+'" frameborder="1" scrolling="auto" width="100%" ></iframe>');
+        $("#ficha .description").html('<iframe id="fred" style="border:1px solid #666CCC" title="PDF in an i-Frame" src="http://' + seg.conditions + '" frameborder="1" scrolling="auto" width="100%" ></iframe>');
     }
     ,
 //<!-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
